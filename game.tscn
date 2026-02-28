@@ -9,4 +9,4 @@
 
 [node name="Horse" parent="." unique_id=235475249 instance=ExtResource("2_feb5d")]
 z_index = 1
-position = Vector2(226, 297)
+position = Vector2(199, 353)
