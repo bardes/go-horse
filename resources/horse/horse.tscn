@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dvitgsysa8ocw"]
+
+[ext_resource type="SpriteFrames" uid="uid://dircy1bi8kblq" path="res://resources/sprites/horse_frames.tres" id="1_ye0un"]
+
+[node name="Horse" type="Node2D" unique_id=235475249]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1470145785]
+sprite_frames = ExtResource("1_ye0un")
+animation = &"smack"
+frame_progress = 0.48246557
+offset = Vector2(0, -24)
+flip_h = true

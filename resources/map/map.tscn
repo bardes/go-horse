@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://crfidsci7c2nd"]
+
+[ext_resource type="TileSet" uid="uid://t68eislorfii" path="res://resources/tileset/block_pack.tres" id="1_cla65"]
+
+[node name="Map" type="Node2D" unique_id=886207319]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1383046790]
+tile_set = ExtResource("1_cla65")
