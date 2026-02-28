@@ -32,6 +32,8 @@ animation = &"fence"
 frame = 2
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2075071473]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1340215701]
 shape = SubResource("RectangleShape2D_4jocx")

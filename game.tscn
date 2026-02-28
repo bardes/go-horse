@@ -2,13 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://crfidsci7c2nd" path="res://resources/map/map.tscn" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://dvitgsysa8ocw" path="res://resources/horse/horse.tscn" id="2_feb5d"]
-[ext_resource type="Script" path="res://fence_spawn.gd" id="4_fc0e3"]
+[ext_resource type="Script" uid="uid://bes5t2k43lyi3" path="res://resources/map/destroy_on_area_exit.gd" id="4_7jktm"]
+[ext_resource type="Script" uid="uid://025wvbltbsk2" path="res://fence_spawn.gd" id="4_fc0e3"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1140, 50, 0, 0, 0, 0, 1140, 522)
 }
 point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
+size = Vector2(1078, 604)
 
 [node name="Game" type="Node2D" unique_id=1055993861]
 
@@ -30,4 +34,14 @@ autostart = true
 position = Vector2(1140, 50)
 rotation = 1.5707964
 
+[node name="Area2D" type="Area2D" parent="." unique_id=2008644548]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4_7jktm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=911773045]
+position = Vector2(506, 288)
+shape = SubResource("RectangleShape2D_feb5d")
+
 [connection signal="timeout" from="FenceSpawn/Timer" to="FenceSpawn" method="_on_timer_timeout"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
