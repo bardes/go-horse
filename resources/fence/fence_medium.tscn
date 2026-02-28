@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bpr6mu8c2wefx"]
+
+[ext_resource type="SpriteFrames" uid="uid://h4372mev5je5" path="res://resources/fence/wooden_fence_small.tres" id="1_sahjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sahjl"]
+size = Vector2(16, 192)
+
+[node name="Fence" type="Node2D" unique_id=1642937095]
+
+[node name="FenceTop" type="AnimatedSprite2D" parent="." unique_id=797316847]
+texture_filter = 1
+position = Vector2(0, -90.00001)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_sahjl")
+animation = &"fence"
+
+[node name="FenceMiddle" type="AnimatedSprite2D" parent="." unique_id=1423993280]
+texture_filter = 1
+position = Vector2(5.9604645e-08, 30)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_sahjl")
+animation = &"fence"
+frame = 1
+
+[node name="FenceMiddle2" type="AnimatedSprite2D" parent="." unique_id=1457751040]
+texture_filter = 1
+position = Vector2(3.5527137e-15, -29.999996)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_sahjl")
+animation = &"fence"
+frame = 1
+
+[node name="FenceBottom" type="AnimatedSprite2D" parent="." unique_id=1916535361]
+texture_filter = 1
+position = Vector2(0, 90)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_sahjl")
+animation = &"fence"
+frame = 2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=142644138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1778975885]
+shape = SubResource("RectangleShape2D_sahjl")

@@ -2,6 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://crfidsci7c2nd" path="res://resources/map/map.tscn" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://dvitgsysa8ocw" path="res://resources/horse/horse.tscn" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://025wvbltbsk2" path="res://fence_spawn.gd" id="4_fc0e3"]
+
+[sub_resource type="Curve2D" id="Curve2D_7jktm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1140, 50, 0, 0, 0, 0, 1140, 522)
+}
+point_count = 2
 
 [node name="Game" type="Node2D" unique_id=1055993861]
 
@@ -10,3 +17,17 @@
 [node name="Horse" parent="." unique_id=235475249 instance=ExtResource("2_feb5d")]
 z_index = 1
 position = Vector2(199, 353)
+
+[node name="FenceSpawn" type="Path2D" parent="." unique_id=1362418057]
+curve = SubResource("Curve2D_7jktm")
+script = ExtResource("4_fc0e3")
+
+[node name="Timer" type="Timer" parent="FenceSpawn" unique_id=1206593188]
+wait_time = 0.5
+autostart = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="FenceSpawn" unique_id=479386661]
+position = Vector2(1140, 50)
+rotation = 1.5707964
+
+[connection signal="timeout" from="FenceSpawn/Timer" to="FenceSpawn" method="_on_timer_timeout"]

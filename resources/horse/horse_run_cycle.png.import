@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf4kuqii3t4ds"
-path="res://.godot/imported/horse_idle_cycle.png-5c0a13cbee82136446a1fa8dc8160c96.ctex"
+uid="uid://b250hq2i53ti4"
+path="res://.godot/imported/horse_run_cycle.png-8b2ee7700525edabd4e8d50934125ba5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/sprites/horse_idle_cycle.png"
-dest_files=["res://.godot/imported/horse_idle_cycle.png-5c0a13cbee82136446a1fa8dc8160c96.ctex"]
+source_file="res://resources/horse/horse_run_cycle.png"
+dest_files=["res://.godot/imported/horse_run_cycle.png-8b2ee7700525edabd4e8d50934125ba5.ctex"]
 
 [params]
 

@@ -8,3 +8,10 @@ func _input(event: InputEvent) -> void:
 	elif event is InputEventMouseButton and event.pressed:
 		animation.play("jump")
 	
+
+
+func _on_collision_area_area_entered(area: Area2D) -> void:
+	if animation.is_playing():
+		print("Yay!")
+	else:
+		print("Whoops...")

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://buiftkdw1n0c"]
+
+[ext_resource type="Script" uid="uid://bdjw1f38cm2xq" path="res://resources/fence/fence_small.gd" id="1_4jocx"]
+[ext_resource type="SpriteFrames" uid="uid://h4372mev5je5" path="res://resources/fence/wooden_fence_small.tres" id="1_xougf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jocx"]
+size = Vector2(16, 142)
+
+[node name="Fence" type="Node2D" unique_id=1642937095]
+script = ExtResource("1_4jocx")
+
+[node name="FenceTop" type="AnimatedSprite2D" parent="." unique_id=797316847]
+texture_filter = 1
+position = Vector2(0, -60)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_xougf")
+animation = &"fence"
+
+[node name="FenceMiddle" type="AnimatedSprite2D" parent="." unique_id=1423993280]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_xougf")
+animation = &"fence"
+frame = 1
+
+[node name="FenceBottom" type="AnimatedSprite2D" parent="." unique_id=1916535361]
+texture_filter = 1
+position = Vector2(0, 59.999992)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("1_xougf")
+animation = &"fence"
+frame = 2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2075071473]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1340215701]
+shape = SubResource("RectangleShape2D_4jocx")

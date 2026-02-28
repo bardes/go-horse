@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dk7mbm84bykp8" path="res://resources/map/map.gd" id="1_gmpnq"]
 
 [node name="Map" type="Node2D" unique_id=886207319]
+z_index = -1
 texture_filter = 1
 script = ExtResource("1_gmpnq")
 

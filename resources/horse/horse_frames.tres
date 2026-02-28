@@ -1,8 +1,8 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dircy1bi8kblq"]
 
-[ext_resource type="Texture2D" uid="uid://bf4kuqii3t4ds" path="res://resources/sprites/horse_idle_cycle.png" id="1_n44ma"]
-[ext_resource type="Texture2D" uid="uid://b250hq2i53ti4" path="res://resources/sprites/horse_run_cycle.png" id="2_deexw"]
-[ext_resource type="Texture2D" uid="uid://bekxjbf7sy5le" path="res://resources/sprites/horse_idle_smack_cycle.png" id="3_rmh5a"]
+[ext_resource type="Texture2D" uid="uid://bf4kuqii3t4ds" path="res://resources/horse/horse_idle_cycle.png" id="1_n44ma"]
+[ext_resource type="Texture2D" uid="uid://b250hq2i53ti4" path="res://resources/horse/horse_run_cycle.png" id="2_deexw"]
+[ext_resource type="Texture2D" uid="uid://bekxjbf7sy5le" path="res://resources/horse/horse_idle_smack_cycle.png" id="3_rmh5a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yeldy"]
 atlas = ExtResource("1_n44ma")

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dvitgsysa8ocw"]
 
 [ext_resource type="Script" uid="uid://cqexcu55dylb8" path="res://resources/horse/horse.gd" id="1_tfaa7"]
-[ext_resource type="SpriteFrames" uid="uid://dircy1bi8kblq" path="res://resources/sprites/horse_frames.tres" id="1_ye0un"]
+[ext_resource type="SpriteFrames" uid="uid://dircy1bi8kblq" path="res://resources/horse/horse_frames.tres" id="1_ye0un"]
 [ext_resource type="Script" uid="uid://cmpb50dpjx6on" path="res://resources/horse/animated_sprite_2d.gd" id="2_7n35t"]
 
 [sub_resource type="Animation" id="Animation_tfaa7"]
-length = 0.001
+length = 0.56666666
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -60,6 +60,10 @@ _data = {
 &"jump": SubResource("Animation_gxuj3")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfaa7"]
+radius = 25.0
+height = 90.0
+
 [node name="Horse" type="Node2D" unique_id=235475249]
 script = ExtResource("1_tfaa7")
 
@@ -89,3 +93,12 @@ script = ExtResource("2_7n35t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=288986738]
 libraries/ = SubResource("AnimationLibrary_wyr08")
+
+[node name="CollisionArea" type="Area2D" parent="." unique_id=1971366983]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea" unique_id=1849186888]
+position = Vector2(-6, 5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_tfaa7")
+
+[connection signal="area_entered" from="CollisionArea" to="." method="_on_collision_area_area_entered"]

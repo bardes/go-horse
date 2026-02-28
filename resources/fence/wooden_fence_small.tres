@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://h4372mev5je5"]
+
+[ext_resource type="Texture2D" uid="uid://dbrjk5lomn7bm" path="res://resources/fence/wooden fence_small.png" id="1_1mg6p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crg5y"]
+atlas = ExtResource("1_1mg6p")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jciq7"]
+atlas = ExtResource("1_1mg6p")
+region = Rect2(0, 12, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8pm6"]
+atlas = ExtResource("1_1mg6p")
+region = Rect2(0, 24, 12, 12)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crg5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jciq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8pm6")
+}],
+"loop": true,
+"name": &"fence",
+"speed": 5.0
+}]
