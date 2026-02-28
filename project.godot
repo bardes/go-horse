@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="GoHorse"
+run/main_scene="uid://crfidsci7c2nd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=576
+window/stretch/mode="viewport"
 
 [physics]
 
