@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bpr6mu8c2wefx"]
 
+[ext_resource type="Script" uid="uid://bdjw1f38cm2xq" path="res://resources/fence/fence_small.gd" id="1_d8boc"]
 [ext_resource type="SpriteFrames" uid="uid://h4372mev5je5" path="res://resources/fence/wooden_fence_small.tres" id="1_sahjl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sahjl"]
 size = Vector2(16, 192)
 
 [node name="Fence" type="Node2D" unique_id=1642937095]
+script = ExtResource("1_d8boc")
 
 [node name="FenceTop" type="AnimatedSprite2D" parent="." unique_id=797316847]
 texture_filter = 1
