@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dvitgsysa8ocw" path="res://resources/horse/horse.tscn" id="2_feb5d"]
 [ext_resource type="Script" uid="uid://bes5t2k43lyi3" path="res://resources/map/destroy_on_area_exit.gd" id="4_7jktm"]
 [ext_resource type="Script" uid="uid://025wvbltbsk2" path="res://fence_spawn.gd" id="4_fc0e3"]
+[ext_resource type="Script" uid="uid://dx70kne7jo3yn" path="res://resources/map/score_label.gd" id="5_7jktm"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -42,6 +43,17 @@ script = ExtResource("4_7jktm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=911773045]
 position = Vector2(506, 288)
 shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2064827952]
+
+[node name="Score" type="Label" parent="CanvasLayer" unique_id=1701570469]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 205.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+text = "Score: 0"
+script = ExtResource("5_7jktm")
 
 [connection signal="timeout" from="FenceSpawn/Timer" to="FenceSpawn" method="_on_timer_timeout"]
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
