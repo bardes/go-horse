@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dvitgsysa8ocw"]
 
 [ext_resource type="SpriteFrames" uid="uid://dircy1bi8kblq" path="res://resources/sprites/horse_frames.tres" id="1_ye0un"]
+[ext_resource type="Script" uid="uid://cmpb50dpjx6on" path="res://resources/horse/animated_sprite_2d.gd" id="2_7n35t"]
 
 [node name="Horse" type="Node2D" unique_id=235475249]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1470145785]
+texture_filter = 1
+scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_ye0un")
-animation = &"smack"
-frame_progress = 0.48246557
+animation = &"run"
+frame_progress = 0.5423477
 offset = Vector2(0, -24)
 flip_h = true
+script = ExtResource("2_7n35t")

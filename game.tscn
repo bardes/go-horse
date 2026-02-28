@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d3w7ydpk5m51v"]
+
+[ext_resource type="PackedScene" uid="uid://crfidsci7c2nd" path="res://resources/map/map.tscn" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://dvitgsysa8ocw" path="res://resources/horse/horse.tscn" id="2_feb5d"]
+
+[node name="Game" type="Node2D" unique_id=1055993861]
+
+[node name="Map" parent="." unique_id=886207319 instance=ExtResource("1_e2o6t")]
+
+[node name="Horse" parent="." unique_id=235475249 instance=ExtResource("2_feb5d")]
+z_index = 1
+position = Vector2(226, 297)
