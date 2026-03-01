@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cy8we7s030adr"]
+
+[ext_resource type="Script" uid="uid://dx70kne7jo3yn" path="res://resources/map/score_label.gd" id="1_vbjcu"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1011194893]
+
+[node name="Score" type="Label" parent="." unique_id=901712022]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 205.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+text = "Score: 0"
+script = ExtResource("1_vbjcu")
+
+[node name="Control" type="Control" parent="." unique_id=2111724134]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
