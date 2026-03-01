@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bes5t2k43lyi3" path="res://resources/map/destroy_on_area_exit.gd" id="4_7jktm"]
 [ext_resource type="Script" uid="uid://025wvbltbsk2" path="res://fence_spawn.gd" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://cy8we7s030adr" path="res://resources/hud/hud.tscn" id="5_7jktm"]
+[ext_resource type="AudioStream" uid="uid://c0vqvnolenr18" path="res://resources/audio/751235__gregorquendel__rossini-william-tell-overture-finale-arranged-for-strings.mp3" id="7_eow3j"]
 
 [sub_resource type="Curve2D" id="Curve2D_7jktm"]
 _data = {
@@ -47,6 +48,11 @@ position = Vector2(506, 288)
 shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="Hud" parent="." unique_id=1011194893 instance=ExtResource("5_7jktm")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1998034711]
+process_mode = 3
+stream = ExtResource("7_eow3j")
+autoplay = true
 
 [connection signal="timeout" from="FenceSpawn/Timer" to="FenceSpawn" method="_on_timer_timeout"]
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cqexcu55dylb8" path="res://resources/horse/horse.gd" id="1_tfaa7"]
 [ext_resource type="SpriteFrames" uid="uid://dircy1bi8kblq" path="res://resources/horse/horse_frames.tres" id="1_ye0un"]
 [ext_resource type="Script" uid="uid://cmpb50dpjx6on" path="res://resources/horse/animated_sprite_2d.gd" id="2_7n35t"]
+[ext_resource type="AudioStream" uid="uid://ctlgooouckx7f" path="res://resources/audio/coin1.ogg" id="4_gxuj3"]
 
 [sub_resource type="Animation" id="Animation_tfaa7"]
 length = 0.56666666
@@ -102,5 +103,8 @@ collision_mask = 2
 position = Vector2(-6, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_tfaa7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=625319706]
+stream = ExtResource("4_gxuj3")
 
 [connection signal="area_entered" from="CollisionArea" to="." method="_on_collision_area_area_entered"]
