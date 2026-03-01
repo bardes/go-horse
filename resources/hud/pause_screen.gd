@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 func _enter_tree():
@@ -9,10 +9,13 @@ func _exit_tree():
 	Globals.game_pause_changed.disconnect(_on_game_paused)
 
 
-func _process(delta: float) -> void:
-	position.x += Globals.scroll_speed * delta
+func _gui_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		Globals.unpause_game()
 
 
 func _on_game_paused(paused: bool):
 	if paused:
-		queue_free()
+		show()
+	else:
+		hide()

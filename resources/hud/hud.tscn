@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cy8we7s030adr"]
 
 [ext_resource type="Script" uid="uid://dx70kne7jo3yn" path="res://resources/map/score_label.gd" id="1_vbjcu"]
+[ext_resource type="Script" uid="uid://c1e6c8nj45jnn" path="res://resources/hud/pause_screen.gd" id="2_adakm"]
+[ext_resource type="Texture2D" uid="uid://ck2awp8jod0ws" path="res://resources/hud/mouse_left.svg" id="2_id83u"]
+[ext_resource type="Texture2D" uid="uid://bqkdoi6wt8ui6" path="res://resources/hud/mouse_vertical.svg" id="3_adakm"]
 
 [node name="Hud" type="CanvasLayer" unique_id=1011194893]
 
@@ -13,10 +16,77 @@ theme_override_font_sizes/font_size = 50
 text = "Score: 0"
 script = ExtResource("1_vbjcu")
 
-[node name="Control" type="Control" parent="." unique_id=2111724134]
+[node name="PauseScreen" type="Control" parent="." unique_id=2111724134]
+process_mode = 2
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_adakm")
+
+[node name="ColorRect" type="ColorRect" parent="PauseScreen" unique_id=1780573948]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseScreen" unique_id=398165934]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseScreen/VBoxContainer" unique_id=948255160]
+layout_mode = 2
+theme_override_constants/separation = 140
+alignment = 1
+
+[node name="Jump" type="VBoxContainer" parent="PauseScreen/VBoxContainer/HBoxContainer" unique_id=1846928487]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="JumpIcon" type="TextureRect" parent="PauseScreen/VBoxContainer/HBoxContainer/Jump" unique_id=1551882371]
+layout_mode = 2
+texture = ExtResource("2_id83u")
+
+[node name="JumpLabel" type="Label" parent="PauseScreen/VBoxContainer/HBoxContainer/Jump" unique_id=433899885]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "JUMP"
+horizontal_alignment = 1
+
+[node name="Move" type="VBoxContainer" parent="PauseScreen/VBoxContainer/HBoxContainer" unique_id=1925798574]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MoveIcon" type="TextureRect" parent="PauseScreen/VBoxContainer/HBoxContainer/Move" unique_id=33714304]
+layout_mode = 2
+texture = ExtResource("3_adakm")
+
+[node name="MoveLabel" type="Label" parent="PauseScreen/VBoxContainer/HBoxContainer/Move" unique_id=350756279]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "MOVE"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PauseScreen/VBoxContainer" unique_id=460271559]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "CLICK TO START"
+horizontal_alignment = 1

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d3w7ydpk5m51v"]
 
 [ext_resource type="PackedScene" uid="uid://crfidsci7c2nd" path="res://resources/map/map.tscn" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://bndctt48tnirk" path="res://game.gd" id="1_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dvitgsysa8ocw" path="res://resources/horse/horse.tscn" id="2_feb5d"]
 [ext_resource type="Script" uid="uid://bes5t2k43lyi3" path="res://resources/map/destroy_on_area_exit.gd" id="4_7jktm"]
 [ext_resource type="Script" uid="uid://025wvbltbsk2" path="res://fence_spawn.gd" id="4_fc0e3"]
@@ -16,6 +17,7 @@ point_count = 2
 size = Vector2(1078, 604)
 
 [node name="Game" type="Node2D" unique_id=1055993861]
+script = ExtResource("1_ryrav")
 
 [node name="Map" parent="." unique_id=886207319 instance=ExtResource("1_e2o6t")]
 
