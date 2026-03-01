@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dircy1bi8kblq" path="res://resources/horse/horse_frames.tres" id="1_ye0un"]
 [ext_resource type="Script" uid="uid://cmpb50dpjx6on" path="res://resources/horse/animated_sprite_2d.gd" id="2_7n35t"]
 [ext_resource type="AudioStream" uid="uid://ctlgooouckx7f" path="res://resources/audio/coin1.ogg" id="4_gxuj3"]
+[ext_resource type="AudioStream" uid="uid://bblg06y6l75mn" path="res://resources/audio/Retro Explosion Short 01.wav" id="5_wyr08"]
 
 [sub_resource type="Animation" id="Animation_tfaa7"]
 length = 0.56666666
@@ -104,7 +105,11 @@ position = Vector2(-6, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_tfaa7")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=625319706]
+[node name="ScorePoint" type="AudioStreamPlayer" parent="." unique_id=625319706]
 stream = ExtResource("4_gxuj3")
+
+[node name="Fail" type="AudioStreamPlayer" parent="." unique_id=776292198]
+process_mode = 3
+stream = ExtResource("5_wyr08")
 
 [connection signal="area_entered" from="CollisionArea" to="." method="_on_collision_area_area_entered"]
