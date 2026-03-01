@@ -17,5 +17,6 @@ func pause_game():
 
 
 func unpause_game():
+	score = 0
 	get_tree().paused = false
 	game_pause_changed.emit(false)

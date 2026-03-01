@@ -25,5 +25,4 @@ func _on_collision_area_area_entered(area: Area2D) -> void:
 	if is_jumping:
 		Globals.score += 1
 	else:
-		Globals.score = 0
 		Globals.pause_game()
